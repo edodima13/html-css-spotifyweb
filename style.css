@@ -19,10 +19,80 @@ main{
 
 /*ASIDE*/
 .side-bar{
-    background-color: orange;
-    width: 20vw;
-    height: calc(100vh - 81px);
+    position: relative;
+    background-color: black;
+    width: 250px;
+    height: 90vh;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: rgba(255, 255, 255, 0.5);
 }
+
+
+.side-bar li:hover{
+    color: white;
+}
+
+.side-bar .logo{
+    width: 100px;
+    padding-bottom: 20px;
+    color: white;
+}
+
+.side-bar .fa-home{
+    padding-left: 11px;
+    margin-left: -14px;
+    padding-left: 10px;
+    border-left: 2px solid lime;
+}
+
+.side-bar ul{
+    list-style: none;
+}
+
+.side-bar li{
+    font-size: 13px;
+}
+
+.aside-list li{
+    padding-bottom: 10px;
+}
+
+.side-bar li:last-child{
+    padding-bottom: 20px;
+}
+
+.side-bar i{
+    vertical-align: middle;
+    font-size: 20px;
+    padding-right: 10px;
+}
+
+.side-bar h4{
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.side-bar .fa-plus-square{
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-size: 40px;
+}
+
+.side-bar li:first-child::after{
+    height: 1px;
+    width: 100%;
+    background-color: grey;
+}
+
+.aside-footer li:first-child{
+    padding-bottom: 10px;
+    border-bottom: 1px solid grey;
+}
+
+
 
 
 /*MAIN-CONTAINER*/
