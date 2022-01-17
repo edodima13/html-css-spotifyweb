@@ -6,33 +6,38 @@
 
 body{
     display: flex;
-    flex-direction: row;
-}
-
-
-/*ASIDE*/
-aside{
-    background-color: orange;
-    width: 20vw;
-    position: fixed;
-    height: 100%;
+    flex-direction: column;
 }
 
 /*MAIN*/
 main{
-    height: 90vh;
-    background-color: green;
-    width: 100%;
+    margin: 0;
     display: flex;
+    background-color: green;
 }
+
+
+/*ASIDE*/
+.side-bar{
+    background-color: orange;
+    width: 20vw;
+    height: calc(100vh - 81px);
+}
+
+
+/*MAIN-CONTAINER*/
+.main-container{
+    flex-grow: 1;
+}
+
 
 
 
 /*FOOTER*/
 footer{
-    position: fixed;
-    bottom: 0;
-    height: 10vh;
+    height: 81px;
     width: 100%;
     background-color: red;
+    position: fixed;
+    bottom: 0;
 }
