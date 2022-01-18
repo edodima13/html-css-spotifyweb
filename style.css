@@ -115,7 +115,6 @@ main{
 }
 
 .main-container{
-    display: flex;
     overflow-y: scroll;
     background-color: #141922;
     width: calc(100% - 230px)
@@ -138,6 +137,11 @@ main{
     padding: 10px 30px;
 }
 
+.upgrade-button:hover{
+    animation: 3s;
+    transform: scale(1.1);
+}
+
 .upgrade-button a{
     font-size: 14px;
     text-decoration: none;
@@ -147,16 +151,42 @@ main{
 
 .categories{
     list-style-type: none;
-    color: white;
-    justify-content: center;
+    text-align: center;
+    padding-top: 110px;
+    padding-bottom: 30px;
 }
 
 .categories li{
+    color: rgba(255, 255, 255, 0.3);
     display: inline-block;
-    padding-top: 110px;
+    padding: 0 10px;
     text-transform: uppercase;
     font-size: 14px;
 }
+
+.categories li:hover{
+    color: white;
+}
+
+
+.evidence{
+    height: 2px;
+    width: 30px;
+    background-color: lime;
+}
+
+.main-body{
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 20px;
+    color: white;
+}
+
+.main-body h3{
+    padding-bottom: 20px;
+}
+
+
 
 
 
