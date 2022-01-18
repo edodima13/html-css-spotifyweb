@@ -145,6 +145,7 @@ footer div{
 }
 
 .song{
+    max-width: 230px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -170,5 +171,71 @@ footer div{
 
 .song i{
     font-size: 15px;
-    padding-right: 20px;
+}
+
+.song .fa-heart{
+    padding-right: 15px;
+}
+
+footer .time-bar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time-header{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: center;
+}
+
+.time-header i{
+    font-size: 19x;
+    color: white;
+}
+
+.time-header div i{
+    padding: 0 10px;
+}
+
+.play{
+    font-size: 25px;
+}
+
+.time-header .fa-play-circle{
+    transform: rotate3d(0, 1, 0, 360deg);
+}
+
+.time-header .fa-step-backward{
+    transform: rotate3d(0, 1, 0);
+}
+
+.time-header .fa-undo{
+    transform: rotate3d(0, 1, 0, 3.142rad);
+}
+
+.time-footer{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.time-footer .time-bar{
+    width: 400px;
+    height: 5px;
+    border-radius: 999px;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.time-bar .white-bar{
+    background-color: white;
+    height: 100%;
+    width: 30%;
+    position: absolute;
+    left: 0;
 }
