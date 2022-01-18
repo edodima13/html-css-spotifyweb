@@ -115,13 +115,47 @@ main{
 }
 
 .main-container{
+    display: flex;
     overflow-y: scroll;
-    flex-grow: 1;
     background-color: #141922;
+    width: calc(100% - 230px)
 }
 
 .upgrade{
     background-color: rgba(0, 0, 0, 0.3);
+    height: 90px;
+    width: 100%;
+    position: fixed;
+}
+
+.upgrade-button{
+    border: 1px solid white;
+    border-radius: 999px;
+    color: white;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    padding: 10px 30px;
+}
+
+.upgrade-button a{
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.categories{
+    list-style-type: none;
+    color: white;
+    justify-content: center;
+}
+
+.categories li{
+    display: inline-block;
+    padding-top: 110px;
+    text-transform: uppercase;
+    font-size: 14px;
 }
 
 
