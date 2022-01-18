@@ -12,17 +12,17 @@ body{
 /*MAIN*/
 main{
     margin: 0;
+    height: calc(100vh - 81px);
     display: flex;
-    background-color: green;
 }
 
 
 /*ASIDE*/
 .side-bar{
     position: relative;
+    flex-shrink: 0;
     background-color: black;
-    width: 250px;
-    height: 90vh;
+    width: 230px;
     padding-top: 15px;
     padding-left: 15px;
     padding-right: 15px;
@@ -87,17 +87,41 @@ main{
     background-color: grey;
 }
 
+.aside-footer{
+    position: absolute;
+    bottom: 5px;
+}
+
 .aside-footer li:first-child{
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     border-bottom: 1px solid grey;
+    margin-bottom: 10px;
+}
+
+.aside-footer .far{
+    font-size: 14px;
+}
+
+.aside-footer li:last-child{
+    padding-bottom: 0;
 }
 
 
 
 
 /*MAIN-CONTAINER*/
+main{
+    height: calc(100vh - 81px);
+}
+
 .main-container{
+    overflow-y: scroll;
     flex-grow: 1;
+    background-color: #141922;
+}
+
+.upgrade{
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 
@@ -107,7 +131,7 @@ main{
 footer{
     height: 81px;
     width: 100%;
-    background-color: red;
+    background-color: #282828;
     position: fixed;
     bottom: 0;
 }
