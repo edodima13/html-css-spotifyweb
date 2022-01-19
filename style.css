@@ -87,9 +87,8 @@ main{
     background-color: grey;
 }
 
-.aside-footer{
-    position: absolute;
-    bottom: 5px;
+.aside-list .overflow{
+    overflow-y: auto;
 }
 
 .aside-footer li:first-child{
@@ -183,9 +182,35 @@ main{
 }
 
 .main-body h3{
-    padding-bottom: 20px;
+    padding-bottom: 25px;
+    font-size: 23px;
 }
 
+.played{
+    display: flex;
+    gap: 15px;
+}
+
+.song-img{
+    text-align: center;
+    margin: 0;
+    width: 16%;
+}
+
+.song-img img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.song-img h6{
+    font-size: 16px;
+}
+
+.song-img p{
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+}
 
 
 
@@ -241,7 +266,11 @@ footer div{
     padding-right: 15px;
 }
 
+
 footer .time-bar{
+    width: 100%;
+    max-width: 400px;
+    margin: 0 10px;
     gap: 10px;
     display: flex;
     flex-direction: column;
@@ -249,6 +278,7 @@ footer .time-bar{
 }
 
 .time-header{
+    white-space: nowrap;
     display: flex;
     justify-content: space-between;
     gap: 15px;
@@ -281,6 +311,7 @@ footer .time-bar{
 }
 
 .time-footer{
+    width: 100%;
     display: flex;
     gap: 10px;
     justify-content: space-between;
@@ -289,11 +320,9 @@ footer .time-bar{
 }
 
 .time-footer .time-bar{
-    width: 400px;
     height: 5px;
     border-radius: 999px;
     background-color: rgba(255, 255, 255, 0.3);
-    position: relative;
     overflow: hidden;
 }
 
