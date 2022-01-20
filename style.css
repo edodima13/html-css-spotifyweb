@@ -150,6 +150,10 @@ main{
 }
 
 .categories{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
     list-style-type: none;
     text-align: center;
     padding-top: 110px;
@@ -159,7 +163,8 @@ main{
 .categories li{
     color: rgba(255, 255, 255, 0.3);
     display: inline-block;
-    padding: 0 10px;
+    margin: 0;
+
     text-transform: uppercase;
     font-size: 14px;
 }
@@ -201,12 +206,48 @@ main{
     display: flex;
     gap: 15px;
     padding-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 .song-img{
     text-align: center;
     margin: 0;
     width: calc((100% / 6) - 15px);
+}
+
+.card-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.card-header img{
+    position: relative;
+    width: 100%;
+    display: block;
+}
+
+.card-header i{
+    position: absolute;
+    font-size: 4vmin;
+    z-index: 1;
+}
+
+.card-header::after{
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.play-hover:hover{
+    display: block;
+    z-index: 1;
 }
 
 .song-img img{
@@ -232,6 +273,7 @@ main{
 
 
 
+
 /*FOOTER*/
 footer{
     height: 81px;
@@ -252,7 +294,6 @@ footer div{
 .song{
     max-width: 230px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     color: rgba(255, 255, 255, 0.3);
 }
@@ -336,6 +377,7 @@ footer .time-bar{
 }
 
 .time-footer .time-bar{
+    position: relative;
     height: 5px;
     border-radius: 999px;
     background-color: rgba(255, 255, 255, 0.3);
@@ -351,8 +393,9 @@ footer .time-bar{
 }
 
 .volume-audio{
+    width: 100%;
+    max-width: 200px;
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 10px;
     padding-right: 10px;
@@ -360,7 +403,8 @@ footer .time-bar{
 }
 
 .volume-audio .time-bar{
-    width: 130px;
+    width: 100%;
+    max-width: 100px;
     height: 5px;
     border-radius: 999px;
     background-color: rgba(255, 255, 255, 0.3);
@@ -375,3 +419,36 @@ footer .time-bar{
     position: absolute;
     left: 0;
 }
+
+@media screen and (max-width: 878px) {
+    .song-img{
+        width: calc((100% / 4) - 15px);
+    }
+}
+
+@media screen and (max-width: 639px) {
+    .song-img{
+        width: calc((100% / 2) - 15px);
+    }
+    
+    .song i{
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 552px) {
+    .main-container{
+        width: auto;
+    }
+    
+    .sidebar-body{
+        display: none;
+    }
+
+    .side-bar{
+        width: auto;
+    }
+}
+
+
+
