@@ -25,6 +25,7 @@ main{
     color: rgba(255, 255, 255, 0.5);
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 .side-bar *{
@@ -94,6 +95,7 @@ main{
 .aside-body{
     padding: 0 15px;
     flex-grow: 1;
+    height: 100%;
 }
 
 .aside-body li{
@@ -119,9 +121,14 @@ main{
     margin-bottom: 10px;
 }
 
-/*.aside-list .overflow{
+.aside-list{
+    height: 70%;
+}
+
+.aside-list .overflow-list{
     overflow-y: auto;
-}*/
+    height: 100%;
+}
 
 .aside-footer{
     padding: 0 15px;
@@ -254,6 +261,10 @@ main{
     flex-wrap: wrap;
 }
 
+.played:hover .card-header::after{
+    opacity: 0.3;
+}
+
 .song-img{
     text-align: center;
     margin: 0;
@@ -268,7 +279,6 @@ main{
 }
 
 .card-header img{
-    position: relative;
     width: 100%;
     display: block;
 }
@@ -277,6 +287,11 @@ main{
     position: absolute;
     font-size: 4vmin;
     z-index: 1;
+    display: none;
+}
+
+.card-header:hover i{
+    display: block;
 }
 
 .card-header::after{
@@ -284,15 +299,12 @@ main{
     display: block;
     position: absolute;
     background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.2 ease-in-out;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
-}
-
-.play-hover:hover{
-    display: block;
-    z-index: 1;
 }
 
 .song-img img{
@@ -313,6 +325,7 @@ main{
     font-size: 12px;
     color: rgba(255, 255, 255, 0.5);
 }
+
 
 
 
@@ -486,12 +499,30 @@ footer .time-bar{
         width: auto;
     }
 
+    .side-bar{
+        align-items: center;
+    }
+
+    .aside-img{
+        padding: 0;
+        padding-top: 5px;
+    }
+
     .logo{
         display: none;
     }
 
-    .logo-small{
+    .side-bar .aside-img .logo-small {
+        padding: 0;
+        padding-bottom: 15px;
         display: block;
+        width: 36px;
+    }
+
+    .aside-header .aside-menù img{
+        margin-left: 0;
+        padding-right: 0;
+        width: 54px;
     }
     
     .aside-body{
